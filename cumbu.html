@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f3">
+<title>For You, Obviously ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff7f5;
+    color: #634b50;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 10% 20%, #ffe0e6 0, transparent 35%),
+        radial-gradient(circle at 90% 80%, #f9dce8 0, transparent 35%);
+    z-index: -1;
+}
+
+nav {
+    padding: 25px;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #bd8997;
+}
+
+main {
+    width: 90%;
+    max-width: 620px;
+    margin: 45px auto;
+    text-align: center;
+}
+
+.heart {
+    font-size: 40px;
+    animation: heartbeat 1.5s infinite;
+    display: inline-block;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+.tag {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #bd8997;
+    margin-top: 22px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 10vw, 70px);
+    line-height: 1.15;
+    font-weight: 500;
+    margin: 18px 0;
+    color: #855967;
+}
+
+h1 i {
+    color: #d48da3;
+}
+
+.intro {
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 390px;
+    margin: 20px auto;
+    color: #95777e;
+}
+
+.card {
+    background: rgba(255,255,255,.75);
+    border: 1px solid #f3dce1;
+    border-radius: 18px;
+    padding: 35px 25px;
+    margin: 35px 0;
+    box-shadow: 0 15px 45px rgba(173, 117, 134, .08);
+}
+
+.card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 17px;
+    color: #a66e7e;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 2;
+    color: #8c7379;
+}
+
+button {
+    border: none;
+    background: #d997a9;
+    color: white;
+    padding: 15px 24px;
+    border-radius: 30px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+    margin: 10px 5px;
+}
+
+button:hover {
+    background: #b9788d;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #eac5d0;
+}
+
+button.secondary {
+    background: white;
+    color: #b9788d;
+    border: 1px solid #eccbd5;
+}
+
+#randomMessage {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: #b9788d;
+    min-height: 65px;
+    margin: 25px 0 5px;
+    line-height: 1.6;
+}
+
+.note {
+    display: none;
+    background: #fff1f4;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 25px;
+    text-align: left;
+    line-height: 2;
+    font-size: 14px;
+    color: #86656f;
+    animation: appear .6s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    text-align: center;
+    padding: 35px 15px;
+    color: #bd8997;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.floating {
+    position: fixed;
+    bottom: -30px;
+    animation: floatUp 7s linear forwards;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        margin: 30px auto;
+    }
+
+    .card {
+        padding: 28px 20px;
+    }
+
+    .intro {
+        font-size: 13px;
+    }
+
+    button {
+        padding: 14px 19px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<nav>A LITTLE SOMETHING FOR SOMEONE ♡</nav>
+
+<main>
+
+    <div class="heart">♡</div>
+
+    <div class="tag">UNOFFICIAL ANNOUNCEMENT</div>
+
+    <h1>Hey, <i>you.</i></h1>
+
+    <p class="intro">
+        So... I made an entire website because apparently
+        just saying I miss you wasn't dramatic enough.
+        Anyway, welcome. You're kinda special here.
+    </p>
+
+    <div class="card">
+        <h2>Can I tell you something?</h2>
+
+        <p>
+            I don't know how you managed to become
+            someone I look forward to talking to,
+            but somehow, you did.
+            <br><br>
+            And honestly? I'm really glad our paths crossed.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Things I need you to know</h2>
+
+        <p>
+            01. I miss you. A little too often, actually.<br>
+            02. Your notifications are suspiciously important to me.<br>
+            03. I am, unfortunately, very fond of you.<br>
+            04. No, I'm not taking complaints about number three.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>A random thought for you</h2>
+
+        <p>
+            Press the button. I have a few things to say.
+            Don't let it get to your head, though.
+        </p>
+
+        <div id="randomMessage">
+            You're taking up quite a lot of my thoughts lately.
+        </div>
+
+        <button onclick="newMessage()">
+            SAY SOMETHING ♡
+        </button>
+    </div>
+
+    <div class="card">
+        <h2>One last thing...</h2>
+
+        <p>
+            There's something I've been meaning to tell you.
+            And yes, you have to open it.
+        </p>
+
+        <button onclick="openLetter()">
+            OPEN YOUR LETTER 💌
+        </button>
+
+        <div class="note" id="letter">
+            Dear you,
+            <br><br>
+            I just want you to know that I'm genuinely
+            grateful I got to meet you.
+            <br><br>
+            Out of all the random people in this enormous
+            internet, somehow I got to know you.
+            And that's something I don't take for granted.
+            <br><br>
+            I miss our conversations, your little updates,
+            and all the random things we end up talking about.
+            Even the ordinary moments feel a little less
+            ordinary when they're shared with you.
+            <br><br>
+            I don't know what the future has planned,
+            but I'm glad you're part of my present.
+            <br><br>
+            So here's to more conversations, more laughter,
+            more silly moments, and hopefully more of you.
+            <br><br>
+            <i>With a suspicious amount of affection,</i>
+            <br>
+            <b>Someone who misses you. ♡</b>
+        </div>
+    </div>
+
+    <div class="tag">
+        P.S. YES, I MADE THIS FOR YOU. DON'T BE SMUG.
+    </div>
+
+</main>
+
+<footer>
+    MADE WITH A LITTLE TOO MUCH AFFECTION ♡
+    <br><br>
+    © 2026 — JUST BETWEEN US
+</footer>
+
+<script>
+const messages = [
+    "I miss you. There, I said it. Happy now?",
+    "You should know that you're very easy to miss.",
+    "If I had a coin for every time I thought about you, I'd be rich.",
+    "I hope something makes you smile today. Preferably me.",
+    "I was minding my business until I remembered you.",
+    "You're becoming my favourite notification. How unfortunate.",
+    "I think you owe me a conversation. Several, actually.",
+    "Just checking if you know how lovely you are.",
+    "I am trying to play it cool. It's not working.",
+    "Thank you for existing in my little corner of the internet."
+];
+
+function newMessage() {
+    const random = Math.floor(Math.random() * messages.length);
+    document.getElementById("randomMessage").innerText =
+        messages[random];
+}
+
+function openLetter() {
+    const letter = document.getElementById("letter");
+
+    if (letter.style.display === "block") {
+        letter.style.display = "none";
+    } else {
+        letter.style.display = "block";
+        letter.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
+    }
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "floating";
+    heart.innerText = ["♡", "♥", "✧", "୨୧"][
+        Math.floor(Math.random() * 4)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 15 + 15) + "px";
+    heart.style.color = "#d997a9";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 7000);
+}
+
+setInterval(createHeart, 1000);
+</script>
+
+</body>
+</html>
